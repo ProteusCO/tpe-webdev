@@ -1,6 +1,6 @@
 @import "../components/base";
 
-.user-viewer, .location-viewer, .company-viewer, .listing-viewer{
+.user-viewer, .location-viewer, .company-viewer, .listing-viewer, .customer-viewer{
   background-color: $WhiteColor;
   border:1px solid $GreyBorder;
   padding: 20px 60px;
@@ -8,14 +8,23 @@
   max-width: 100%;
 }
 
-.user-viewer .prop, .location-viewer .prop, .company-viewer .prop {
-  display: block;
+.user-viewer  .location-viewer  .company-viewer {
+  .prop {
+    display: block;
+  }
 }
 
 .location-viewer .company,.company-viewer .name {
   font-size: 1.5em;
 }
 
+.user-viewer, .customer-viewer {
+  .picture {
+    display: inline-block;
+    min-height: 550px;
+    float: left;
+  }
+}
 
 
 
