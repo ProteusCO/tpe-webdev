@@ -1,87 +1,110 @@
 @import "../../components/base";
 
+//the view of listing
+//Top post
+
+
 #column2 .listing{
   max-width: 100%;
 }
 
-.listing .prop-body{
-  position: relative;
-}
 
 .listing .prop-body {
   margin-left: 30px;
   margin-top: 20px;
- .buyers .interval-editor > button.btn{
-    margin-top: 0px;
+  position: relative;
+  width: 100%;
 
+
+  > div:first-child{
+    min-width: 200px;
+    width: 18%;
+    margin-right: 5%;
+    background-color: white;
+    padding: 10px;
+    display:inline-block;
+    vertical-align: top;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 5px #888888;
   }
 
-  .prop:nth-child(-n+7) > *, .status > *, .listing-time > * {
-    display: inline-block;
-    width: 180px;
-  vertical-align: top;
+  .image .val img{
+    width: 80%;
   }
 
-  .prop:nth-child(-n+7), .statuss, .listing-time {
-    margin-bottom: .01rem;
+  .image .val{
+    text-align: center;
   }
-  .prop:nth-child(-n+7) > label, .status > label, .listing-time > label {
-    width: 170px;
-  }
-
-  .prop:nth-child(-n+7) > label:after {
-    content: ':';
+  .note .val{
+    max-height: 340px;
+    overflow-y: scroll;
   }
 
-  .note {
-	position: absolute;
-	top: 0px;
-	left: 450px;
-	width: 340px;
-	border: 1px solid #aaa;
-	max-height: 340px;
-	overflow-y: scroll;
+  //Absolute Position of all the header stuff
+  //This is temp placement until design is ready then add divs to wrap and position properly
+
+  .location, .lot-number, .type{
+    position: absolute;
+    left: 23%;
+    display: flex;
+    label{
+      margin: 0 10px 0 30px;
+    }
   }
 
-  .note .val p strong{
-	font-weight: normal;
-  }
-  .note label:after {
-    content: ":";
-  }
-  .note label:before {
-    content: "Listing ";
-  }
-
-
-
-  > div > .status{
-    left: 850px;
-	position: absolute;
-	top: 0px;
-    min-width: 1px;
-    width: auto;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 20px;
-
-		> div{
-		  display: block;
-		}
+  .location{
+    top: 0;
+    font-size: 1.9em;
+    Font-weight: bold;
+    height: 180px;
+    width: 70%;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;
+    text-transform: uppercase;
   }
 
-
-
-
-  .listing-time {
-    top: 30px;
-    right: 10%;
+  .lot-number{
+    top: 50px;
   }
+
+  .type {
+    top: 80px;
+  }
+
+  //The status details in the top right
+  //absolute position until design is ready and add divs
+
+  > div:first-child > .status{
+    position: absolute;
+    top: 20px;
+    left: 60%;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  .status > .actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .actions .btn{
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 5px #888888;
+  }
+
+
+
+  //Interval Portion
+
+
+
   .richlist{
     margin-top: 10px;
   }
   .interval-props .buyers{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,17 +116,43 @@
   //Interval Part
 
   .tab-container{
-    margin-top: 20px;
+      display: inline-block;
+      width: 70%;
+      vertical-align: top;
+      margin: 220px 0 50px 0;
+    box-shadow: 10px 10px 5px #888888;
+
+    .tab-items .ti a {
+      font-weight: bold;
+      color: black;
+
+    }
+    }
+
   }
   .tab-content {
+
+
+    .information > div label{
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+
+    .information > div label:after{
+      content: ":";
+    }
+
+
     .instructions {
       font-size: 1.1em;
     }
-
+  .actions {
     .btn {
       width: auto;
       min-width: 0;
       margin-top: 10px;
+      box-shadow: 2px 2px 5px #888888;
     }
     .add {
       margin-bottom: 30px;
@@ -119,7 +168,7 @@
       background-color: $WhiteColor;
       color: $PoultryExchangeBlue;
     }
-
+  }
     .select {
       margin-left: 10px;
     }
@@ -137,7 +186,8 @@
       margin-bottom: 25px;
       padding: 15px;
       position: relative;
-      margin-left: 7%;
+      margin-left: 80px;
+
 
       //make all the buttons look good
       .up, .down {
@@ -165,11 +215,32 @@
       .interval-props{
         display: flex;
       }
+      .no_data{
+        color: red;
+        padding-right: 5px;
+
+      }
+
+
     }
+    //This needs to be after interval
+    .information{
+      min-height: 1px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: none;
+      padding-top: 20px;
 
+    }
   }
-}
 
+  //change the color of the rows of the table to none
+.listing .miwt-table .miwt-table-data tr td{
+  background-color: white;
+  border: 1px solid #aaa;
+}
 
 
 
