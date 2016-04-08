@@ -1,26 +1,45 @@
 @import "../../components/base";
 
-.listing-edit, .location-edit {
-  .prop-footer, .prop-body {
-  margin-left: 30px;
+.listing-edit, .listing-add {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  .prop-footer-actions > .actions, .btn{
+    margin-right: 10px;
+  }
+ .prop-body {
+    width: 50%;
+    background-color: white;
+    padding: 50px 40px 25px 40px;
+    box-shadow: 10px 10px 5px #888888;
+   margin: 20px 0;
+   .prop {
+     display: inline-block;
+     vertical-align: top;
+   }
+   .kill-date, .ship-date, .start-time, .grade{
+     width: 25%;
+   }
+   .note{
+     width: 48%
+   }
+    .volume, .weight{
+     width: 50%;
+   }
+
+   .image{
+     display: inline-block;
+       vertical-align: top;
+     width: 45%;
+   }
+   .packaging{
+     width: 100%;
+   }
+
+
+
   }
 
-  .prop-body > .packaging{
-    display: block;
-  }
-
-  .prop-body .note{
-    display: block;
-    .rte{
-      width: 500px;
-    }
-
-    .prop-body {
-        .weight, .volume{
-          display: block;
-        }
-    }
-  }
 }
 
 
