@@ -1,48 +1,71 @@
 @import "../components/base";
 
-.prop-editor{
-  margin-left: 30px;
-  width: 100%;
-  max-width:none;
 
-  .name-editor{
-    display: block;
+.prop-wrapper{
+  width: 70%;
+  margin: auto;
+  min-width: 700px;
+
+    .prop-body {
+      padding: 50px 10px;
+      margin: auto;
+
+      .company, .location-name {
+        display: inline-block;
+        width: 50%;
+
+      }
+
+      .prop input[type=text],  .prop input[type=email],  .prop input[type=tel],  .prop textarea {
+        min-width: 20rem;
+      }
+
+
+
+      .company .select2-selection--single {
+        min-width: 20rem;
+      }
+
+      .address > .prop, > .phone, .email-address, .cert-info, .payment-info, .name {
+        display: inline-block;
+      }
+
+      .address-line-1, .address-line-2, .city, .email,  > .phone, .email-address, .plant-id, .payment-info, .cert-info, .name {
+        width: 50%;
+      }
+
+      .postal-code {
+        width: 25%;
+      }
+
+      .postal-code input[type=text] {
+        min-width: 5rem;
+        width: 9rem;
+      }
+
+      //user edit
+      .name-editor > div, .email-address, .phone{
+        display: inline-block;
+        width: 50%;
+      }
+
+    }
   }
 
-  .prop{
-	display: inline-block;
+
+
+//center the buttons on the prop editor
+.prop-editor {
+  .prop-header-actions > div,
+  .prop-footer-actions .bottom {
+    text-align: center;
+  }
+  .picture-editor{
+    border: 1px solid #aaa;
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    min-height: 100px;
   }
 
-  .address-line-2{
-	width: 49%;
-  }
-  .phone{
-	display: inline-block;
-  }
-
-  .payment-info, .certification{
-	display:block;
-  }
 }
-
-//Temp until I get class names that I want
-//For adding and editing location for PE admin
-.location-add, .location-edit{
-
- .prop-body > .prop:nth-of-type(6) {
-	width: 60%;
-  }
-  .prop-body >.prop:last-of-type{
-	display:block
-  }
-}
-.prop-editor .postal-code input[type=text]{
-  width: 180px;
-  min-width: 60px;
-}
-
-
-
-
-
-

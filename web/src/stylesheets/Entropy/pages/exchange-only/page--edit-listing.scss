@@ -4,27 +4,46 @@
   display: flex;
   flex-direction: column;
   align-items:center;
+
+  .prop-header{
+    position: realative;
+  }
+
+  .message-container{
+    left: 10%;
+    position: absolute;
+
+  }
   .prop-footer-actions > .actions, .btn{
     margin-right: 10px;
   }
  .prop-body {
     width: 50%;
     background-color: white;
+   min-width: 750px;
     padding: 50px 40px 25px 40px;
     box-shadow: 10px 10px 5px #888888;
    margin: 20px 0;
    .prop {
      display: inline-block;
      vertical-align: top;
+
    }
    .kill-date, .ship-date, .start-time, .grade{
-     width: 25%;
+     width: 33%;
+   }
+   .grade{
+     padding-left: 30px;
    }
    .note{
      width: 48%
    }
     .volume, .weight{
-     width: 50%;
+     width: 33%;
+      input[type=text]{
+        min-width: 50px;
+      }
+
    }
 
    .image{

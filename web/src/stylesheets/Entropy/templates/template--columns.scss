@@ -1,14 +1,14 @@
 @import "../components/base";
 
-
-
-
+html,body {
+  height:100%;
+}
 .enclosing{
   overflow: hidden;
   background-color: $WhiteColor;
 }
 #column1{
-  width: 15%;
+  width: 12%;
   height: 100%;
   background-color:  $PoultryExchangeBlue;
   color: $WhiteColor;
@@ -20,8 +20,13 @@
 }
 
 #column2{
-  width: 85%;
-  margin-right: 0px;
+  width: 88%;
+     margin-right: 0px;
+    background-color: #EBEAE6;
+    padding-bottom: 100px;
+
+    margin-bottom: -100px;
+
   }
 
 

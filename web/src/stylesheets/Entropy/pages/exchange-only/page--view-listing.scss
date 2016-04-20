@@ -189,7 +189,7 @@
         }
       }
       .interval-actions{
-        padding-left: 20px;
+        text-align: center;
         .btn{
           margin-right: 30px;
         }
@@ -231,7 +231,6 @@
 
 
     .interval {
-
       min-height:  150px;
 
       border: 1px solid #aaa;
@@ -239,7 +238,7 @@
       margin-bottom: 40px;
 
       position: relative;
-      margin-left: 80px;
+      margin-left: 100px;
 
 
       //make all the buttons look good
@@ -294,6 +293,32 @@
   border: 1px solid #aaa;
 }
 
+.listing{
+  .pending{
+  }
 
+  .pending:before{
+    content: "Pending";
+  }
+
+  .active{
+    background-color: #7BAFD4;
+  }
+  .active:before{
+    content: "Active";
+    color: red;
+  }
+
+  .closed{
+    background-color: #aaa;
+    color: white;
+  }
+
+  .closed:before{
+    content: "Closed";
+    color: yellow;
+  }
+
+}
 
 

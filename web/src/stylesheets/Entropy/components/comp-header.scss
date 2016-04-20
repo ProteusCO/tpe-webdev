@@ -32,13 +32,13 @@
 
   img.logo {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0px;
     width: 300px;
   }
   .logout {
     position: absolute;
-    top: 0px;
+    top: 50px;
     right: 10px;
   }
 
@@ -88,25 +88,16 @@
 
   }
 
-  .logout {
-    height: 99px;
-    width: 99px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    background-color: $PoultryExchangeBlue;
-    text-align: center;
-    color: $BrownColor;
-    font-size: .9em;
-    font-weight: bold;
-    border: 1px solid black;
-
+  .logout .username:before{
+    content: "Welcome, ";
   }
 
-  .logout a {
-    color: $WhiteColor;
-    font-weight: bold;
+  .logout span.username:after{
+    content: " |";
   }
+  .logout span{
+    font-weight: bold;
+    font-size: .9em
+  }
+
 }
