@@ -1,0 +1,20 @@
+@import "../../components/base";
+
+
+.buyer .column-wrapper{
+
+  > .image{
+	display: inline-block;
+	width: 300px;
+	vertical-align: top;
+	height: 300px;
+  }
+  > .bidding
+  {
+	display: inline-block;
+	width: 500px;
+	padding: 45px;
+	height: 300px;
+  }
+
+}

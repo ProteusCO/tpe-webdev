@@ -1,26 +1,44 @@
 @import "../components/base";
 
 #header {
+  height: 100px;
   width: 100%;
   background-color: $WhiteColor;
   position: relative;
-  padding-top: 70px;
+  padding: 100px 1px 1px 15%;
   text-align: right;
-  padding-right: 100px;
 
-  .menu {
-    float: right;
+  //makes the nav look like tabs
+  .menu > ul > li{
+    height: 31px;
+    border: 1px solid black;
+    border-top-right-radius:  10px;
+    border-top-left-radius:  10px;
+    background-color: $WhiteColor;
+    margin-right: 5px;
+    border-bottom: none;
+  }
+
+  .menu > ul > li > a > span{
+    color: $PoultryExchangeBlue;
+  }
+
+  .menu > ul > li.selected-tab{
+    background-color: $PoultryExchangeBlue;
+    > a > span{
+      color: $WhiteColor;
+    }
   }
 
   img.logo {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0px;
     width: 300px;
   }
   .logout {
     position: absolute;
-    top: 0px;
+    top: 50px;
     right: 10px;
   }
 
@@ -70,25 +88,16 @@
 
   }
 
-  .logout {
-    height: 99px;
-    width: 99px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    background-color: $PoultryExchangeBlue;
-    text-align: center;
-    color: $BrownColor;
-    font-size: .9em;
-    font-weight: bold;
-    border: 1px solid black;
-
+  .logout .username:before{
+    content: "Welcome, ";
   }
 
-  .logout a {
-    color: $WhiteColor;
-    font-weight: bold;
+  .logout span.username:after{
+    content: " |";
   }
+  .logout span{
+    font-weight: bold;
+    font-size: .9em
+  }
+
 }

@@ -3,9 +3,9 @@ $BrownColor:  #cccc99;
 $WhiteColor: #ffffff;
 $GreyBorder: #aaa;
 $BlackFontColor: black;
-$TableEvenRows:  #cccc99;
-$TableOddRows: #D9D9B3;
-$TableHoverColor: #EDEDDA;
+$TableEvenRows: #ffffff;
+$TableOddRows: #DDDDDD;
+$TableHoverColor: #EEEEEE;
 $LoginScreenBackGroundColor: #aaaaaa;
 
 
@@ -48,8 +48,21 @@ div.window.dialog{
   top: 550px;
   left: 18%;
   height: 162px;
-  border: 1px solid $PoultryExchangeBlue;
+  border-radius: 0;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+
+  .prop-editor {
+  margin-left: 0;
+  }
 }
+
+div.window.dialog .windowcontent {
+    border-radius: 0;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  .actions {
+    margin-top: 10px;
+  }
+  }
 
 .windowbuttons button{
   font-weight: bold;

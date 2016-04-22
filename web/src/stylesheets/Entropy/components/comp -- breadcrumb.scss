@@ -5,23 +5,22 @@
   display: flex;
   align-items: center;
   background-color: $PoultryExchangeBlue;
+  color: $WhiteColor;
 }
 
 .breadcrumb_path .current{
   color:$WhiteColor;
   font-weight: bold;
-  font-size: 1.5em;
 }
 
 .breadcrumb_path li a{
   color: $WhiteColor;
-  font-size: 1.1em;
+
 }
 
 .breadcrumb_path li a:hover{
   color: $BrownColor;
   text-decoration: none;
-  font-size: 1.5em;
   font-weight: bold;
 }
 

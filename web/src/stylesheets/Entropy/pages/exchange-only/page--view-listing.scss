@@ -1,45 +1,324 @@
 @import "../../components/base";
 
-.listing-viewer .prop-body{
-
- .prop + .note {
-    width: 100%;
-    text-align: left;
-    border: none;
-  }
-
- .prop + .status {
-    display: block;
-    width: 100%;
-    border: none;
-  }
-
- .prop + .listing-time {
-    display: block;
-    width: 100%;
-    border: none;
-  }
+//the view of listing
+//Top post
 
 
-
- .prop {
-    display: inline-block;
-    width: 16%;
-    text-align: left;
-    margin-right: 0;
-    vertical-align: top;
-  }
-
- .location {
-    display: block;
-    text-align: left;
-    width: 100%;
-    font-size: 2em;
-    margin-bottom: 30px;
-  }
-
- .prop + .note span {
-   text-align: left;
-   width: 100%;
- }
+#column2 .listing{
+  max-width: 100%;
 }
+
+
+.listing .prop-body {
+  margin-left: 30px;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+
+
+  > div:first-child{
+    min-width: 200px;
+    width: 18%;
+    margin-right: 5%;
+    background-color: white;
+    padding: 10px;
+    display:inline-block;
+    vertical-align: top;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 5px #888888;
+  }
+
+  .image .val img{
+    width: 80%;
+  }
+
+  .image .val{
+    text-align: center;
+  }
+  .note .val{
+    max-height: 340px;
+    overflow-y: scroll;
+  }
+
+  //Absolute Position of all the header stuff
+  //This is temp placement until design is ready then add divs to wrap and position properly
+
+  .location, .lot-number, .type{
+    position: absolute;
+    left: 23%;
+    display: flex;
+    label{
+      margin: 0 10px 0 30px;
+    }
+  }
+
+  .location{
+    top: 0;
+    font-size: 1.9em;
+    Font-weight: bold;
+    height: 180px;
+    width: 70%;
+    background-color: white;
+    box-shadow: 10px 10px 5px #888888;
+    text-transform: uppercase;
+  }
+
+  .lot-number{
+    top: 50px;
+  }
+
+  .type {
+    top: 80px;
+  }
+
+  //The status details in the top right
+  //absolute position until design is ready and add divs
+
+  > div:first-child > .status{
+    position: absolute;
+    top: 20px;
+    left: 60%;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  .status > .actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .actions .btn{
+    margin-bottom: 8px;
+    box-shadow: 2px 2px 5px #888888;
+  }
+
+
+
+  //Interval Portion
+
+
+
+  .richlist{
+      margin: 20px 0;
+    }
+  .interval-props .buyers{
+
+  }
+  //Interval Part
+
+  .tab-container{
+      display: inline-block;
+      width: 70%;
+      vertical-align: top;
+      margin: 220px 0 50px 0;
+      box-shadow: 10px 10px 5px #888888;
+
+    .tab-items .ti a {
+      color: black;
+
+    }
+    }
+
+  }
+  .tab-content {
+
+    .winner{
+      display: flex;
+      flex-direction: column;
+        label{
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+    .information > div label{
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+
+    .information > div label:after{
+      content: ":";
+    }
+
+
+    .instructions {
+      font-size: 1.1em;
+    }
+  .actions {
+    .btn {
+      width: auto;
+      min-width: 0;
+      margin-top: 10px;
+      box-shadow: 2px 2px 5px #888888;
+    }
+    .add {
+      margin-bottom: 30px;
+    }
+    .select {
+      border: 1px solid $PoultryExchangeBlue;
+    }
+    .add, .save, .edit {
+      background-color: $PoultryExchangeBlue;
+      color: $WhiteColor;
+    }
+    .select, .cancel {
+      background-color: $WhiteColor;
+      color: $PoultryExchangeBlue;
+    }
+  }
+    .select {
+      margin-left: 10px;
+    }
+    .buyers .interval-editor label{
+
+      font-weight: bold
+    }
+    .renderer{
+      padding: 10px 10px 10px 20px;
+      .interval-props{
+        display: flex;
+
+        >div{
+          width: 18%;
+          padding: 5px;
+        }
+        .buyers{
+          width: 46%;
+        }
+      }
+      .interval-actions{
+        text-align: center;
+        .btn{
+          margin-right: 30px;
+        }
+      }
+
+    }
+
+    .editor{
+      padding: 10px 10px 10px 20px;
+      .interval-props {
+
+        .duration,.reserve-price, .strike-price {
+          display: inline-block;
+          width: 30%
+        }
+        .element {
+          .selector{
+            display: none;
+          }
+          div {
+            span {
+              display: inline-block;
+              min-width: 50%;
+              margin-right: 20px;
+            }
+            .btn{
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .element input {
+          display: hidden;
+        }
+
+      }
+    }
+
+
+    .interval {
+      min-height:  150px;
+
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      margin-bottom: 40px;
+
+      position: relative;
+      margin-left: 100px;
+
+
+      //make all the buttons look good
+      .up, .down {
+        position: absolute;
+        left: -90px;
+      }
+      .up {
+        top: 10px;
+        width: 100px;
+      }
+      .down {
+        bottom:10px;
+      }
+      .edit {
+        width: 95px;
+      }
+      .actions .up {
+        width: 85px !important;
+      }
+
+      .actions {
+
+      }
+      .interval-props{
+
+      }
+      .no_data{
+        color: red;
+        padding-right: 5px;
+
+      }
+
+
+    }
+    //This needs to be after interval
+    .information{
+      min-height: 1px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border: none;
+      padding-top: 20px;
+
+    }
+  }
+
+  //change the color of the rows of the table to none
+.listing .miwt-table .miwt-table-data tr td{
+  background-color: white;
+  border: 1px solid #aaa;
+}
+
+.listing{
+  .pending{
+  }
+
+  .pending:before{
+    content: "Pending";
+  }
+
+  .active{
+    background-color: #7BAFD4;
+  }
+  .active:before{
+    content: "Active";
+    color: red;
+  }
+
+  .closed{
+    background-color: #aaa;
+    color: white;
+  }
+
+  .closed:before{
+    content: "Closed";
+    color: yellow;
+  }
+
+}
+
+

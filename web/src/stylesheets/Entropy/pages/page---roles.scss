@@ -1,12 +1,12 @@
 @import "../components/base";
 
-#column2 .miwt{
+.user-roles .miwt{
   background-color: $WhiteColor;
   border: 1px solid $GreyBorder;
 }
 
 //For the roles page only
-#column2 .user-roles h1{
+ .user-roles h1{
 	font-weight: bold;
 	font-size: 1.8em;
 	margin: 50px 0 50px 6%;
@@ -16,6 +16,7 @@
 .user-roles > div{
   padding-left: 6%;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .user-roles div > span {
@@ -23,21 +24,26 @@
   min-width: 150px;
 }
 
-input[type=checkbox]:checked + label{
+.user-roles input[type=checkbox]:checked + label{
   color: $PoultryExchangeBlue;
 }
-
-
-.message-container > div > span.brief {
+.user-roles .message-container > div > span.brief {
   display: inline-block;
   width: 100%;
   height:20px;
   margin: 0;
   padding: 0;
 }
-
-.message-container{
-  width: 50%;
-  margin: 10px 0;
+//This need media query for smaller screen
+.user-roles > div .message-container{
+  position: absolute;
+  top: 60px;
+  width: 450px;
 }
 
+#column2 .user-roles{
+  padding-bottom: 60px;
+  h2{
+    margin-top: 45px;
+  }
+}

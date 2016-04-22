@@ -1,13 +1,24 @@
 @import "../components/base";
 
 @media (max-width: 900px) {
-  #column2{
-	width: 81%;
+  .enclosing{
+	overflow: visible;
   }
-  #header .mi{
-	margin-right: 2%;
+  #header{
+	padding:100px 1px 1px 1px;
+  }
+  #column1{
+	margin-bottom: 0;
+	width: 20%;
+  }
+  #column2{
+	width: 80%;
+  }
+  #header > .menu,   #header > .menu > ul{
+	width: 100%;
   }
 }
+
 
 @media (max-width: 768px)  {
   #column1, #column2{
@@ -18,15 +29,16 @@
 	text-align: center;
 	font-size: 1.5em;
 	padding-bottom: 0;
-	margin-bottom: 0;
   }
 
   .breadcrumb_path ol{
 	margin: auto;
   }
-  #header{
-	padding:100px 0 0 0;
+
+  #header > .menu,   #header > .menu > ul, #header > .menu > ul > li{
+	width: 100%;
   }
+
   #header .mi {
 	display: flex;
 	align-items: center;
@@ -37,22 +49,22 @@
 	min-height: 45px;
 	font-size: 1.2em;
   }
-
+	#header > .menu > ul > li {
+	border-radius: 10px;
+	  border: 1px solid white;
+	}
   #header .mi a{
 	text-align: center;
 	width: 100%;
   }
-  .enclosing{
-	overflow: visible;
-  }
-}
 
-@media (max-width: 515px){
-  #column2{
+
+@media (max-width: 515px) {
+  #column2 {
 	padding: 0;
   }
 
-
+}
 }
 
 

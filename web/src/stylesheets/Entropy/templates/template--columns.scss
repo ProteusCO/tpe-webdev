@@ -1,26 +1,32 @@
 @import "../components/base";
 
-
-
-
+html,body {
+  height:100%;
+}
 .enclosing{
   overflow: hidden;
   background-color: $WhiteColor;
 }
 #column1{
-  width: 15%;
-  min-width: 130px;
+  width: 12%;
   height: 100%;
   background-color:  $PoultryExchangeBlue;
   color: $WhiteColor;
   padding-top:45px;
   padding-bottom: 1200px;
   margin-bottom: -1200px;
+  margin-right: 0px;
 
 }
 
 #column2{
-  width: 85%;
+  width: 88%;
+     margin-right: 0px;
+    background-color: #EBEAE6;
+    padding-bottom: 100px;
+
+    margin-bottom: -100px;
+
   }
 
 

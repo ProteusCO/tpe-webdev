@@ -1,7 +1,7 @@
 @import "../components/base";
 
 .search-bar{
-  background-color: $BrownColor;
+  background-color: #EBEAE6;
   color: $BlackFontColor;
   font-size: 1.1em;
   margin: 0;
@@ -10,10 +10,7 @@
 .search .add{
   margin: 10px 10px 0 0;
 }
-.miwt-table, .search-bar, .miwt-table td{
-  border: 1px solid $GreyBorder;
-  border-radius: 3px;
-}
+
 .miwt-table td{
   border: 1px solid $GreyBorder;
 }
@@ -43,14 +40,30 @@ thead tr{
   font-weight: bold;
 }
 
+//Header row styles
 .miwt-table thead > tr > th{
-  background-color: $BlackFontColor;
-  border: 1px solid $WhiteColor;
+  background-color: #71767C;
+  text-align: center;
+  padding: 0;
 }
 .miwt-table thead > tr > th span{
   color:$WhiteColor;
   font-size:1.1em;
+}
 
+//align all the data in the tables
+.search .miwt-table > tbody > tr > td {
+  text-align:center;
+  padding: 0;
+}
+
+//give the button on the left side some space
+.search .miwt-table-data div.actions{
+  padding: 0 10px;
+}
+//remove column header line with hover
+.miwt-table thead > tr > th a:hover {
+  text-decoration: none;
 }
 
 //These two colors will change when designer picks colors
@@ -62,9 +75,10 @@ thead tr{
   background-color: $TableOddRows;
 }
 
-.miwt-table * td {
-  border: 1px solid $WhiteColor;
-}
+//If I want to overpower and change the table border colors
+//.miwt-table * td {
+//  border: 1px solid $PoultryExchangeBlue;
+//}
 
 tbody tr:hover td, .search-wrapper .miwt-table tbody tr:hover td {
   background-color: $TableHoverColor;
